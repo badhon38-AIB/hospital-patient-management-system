@@ -40,8 +40,8 @@ int pop() {
     return st[t--];
 }
 
-P* newP(int id, char name[], int age, int emg) {
-    P *p = (P*)malloc(sizeof(P));
+P *newP(int id, char name[], int age, int emg) {
+    P *p = (P *) malloc(sizeof(P));
     p->id = id;
     strcpy(p->name, name);
     p->age = age;
@@ -68,7 +68,7 @@ void addP(int id, char name[], int age, int emg) {
     table[i] = p;
 }
 
-P* findP(int id) {
+P *findP(int id) {
     int i = hash(id);
     P *c = table[i];
     while (c) {
